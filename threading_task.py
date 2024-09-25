@@ -7,11 +7,11 @@ def simulate_io_task(file_name, duration):
 
 def run_io_tasks():
   io_tasks = [
-    ("prime_numbers1", 3),
-    ("prime_numbers2", 2),
-    ("prime_numbers3", 4),
-    ("prime_numbers4", 1),
-    ("prime_numbers5", 2),
+    ("file_chunk_1", 3),
+    ("file_chunk_2", 2),
+    ("file_chunk_3", 4),
+    ("file_chunk_4", 1),
+    ("file_chunk_5", 2),
   ]
 
   threads = []

@@ -15,11 +15,11 @@ async def async_write_to_file(filename, data, duration):
 async def run_async_tasks(prime_numbers):
     chunk_size = len(prime_numbers) // 5  # Assuming you want to create 5 files
     async_tasks = [
-        ("prime_numbers1", prime_numbers[:chunk_size], 2),
-        ("prime_numbers2", prime_numbers[chunk_size:2*chunk_size], 1),
-        ("prime_numbers3", prime_numbers[2*chunk_size:3*chunk_size], 3),
-        ("prime_numbers4", prime_numbers[3*chunk_size:4*chunk_size], 1.5),
-        ("prime_numbers5", prime_numbers[4*chunk_size:], 1.5),
+        ("prime_numbers1.txt", prime_numbers[:chunk_size], 2),
+        ("prime_numbers2.txt", prime_numbers[chunk_size:2*chunk_size], 1),
+        ("prime_numbers3.txt", prime_numbers[2*chunk_size:3*chunk_size], 3),
+        ("prime_numbers4.txt", prime_numbers[3*chunk_size:4*chunk_size], 1.5),
+        ("prime_numbers5.txt", prime_numbers[4*chunk_size:], 1.5),
     ]
 
     await asyncio.gather(*[async_write_to_file(file, data, duration) for file, data, duration in async_tasks])
