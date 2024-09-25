@@ -9,7 +9,6 @@ async def async_write_to_file(filename, data, duration):
     with open(filename, "w") as f:
         for number in data:
             f.write(f"{number}\n")
-    print("\n")
     print(f"Finished {filename}")
 
 async def run_async_tasks(prime_numbers):
